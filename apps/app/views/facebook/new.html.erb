@@ -1,0 +1,17 @@
+<h2>Sign_up with facebook</h2>
+
+<%= form_for(:user, url: register_with_fb_path) do |f| %>
+
+<div><%= f.label "Email" %><br />
+<%= f.text_field :email, :autofocus => true %></div>
+
+<div><%= f.label :fb_id %><br />
+<%= f.password_field :fb_id, autocomplete: "off" %></div>
+
+<div><%= f.label :fb_token %><br />
+<%= f.password_field :fb_token, autocomplete: "off" %></div>
+
+<div><%= f.submit "Sign up" %></div>
+<% end %>
+
+
